@@ -1,8 +1,7 @@
-const MODULE = {
-
+class MODULE {
 }
 
 /**
  * Export Our Module
  */
-exports default MODULE
+export default MODULE

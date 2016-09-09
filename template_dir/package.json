@@ -4,15 +4,17 @@
   "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup -c",
-    "build-test": "npm run build && npm run test",
+    "build-mocha": "npm run build && npm run mocha",
     "dev": "webpack-dev-server --config webpack.dev.config.js --content-base dev/ --hot --inline",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "standard src/** && nyc node_modules/mocha/bin/mocha -r babel-core/register test/**",
+    "test": "standard src/** && npm run mocha",
+    "mocha": "mocha -r babel-core/register test/**",
+    "coverage": "nyc node_modules/mocha/bin/mocha -r babel-core/register test/**",
     "watch": "npm-watch"
   },
   "watch": {
-    "build-test": "{src}/**/*.js",
-    "test": "{test}/**/*.js"
+    "build-mocha": "src/**/*.js",
+    "mocha": "test/**/*.js"
   },
   "repository": {
     "type": "git",

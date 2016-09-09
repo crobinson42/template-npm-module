@@ -1,12 +1,12 @@
 var assert = require('assert')
 
-// const Module = require('../dist/bundle.js')
+import Module from '../dist/bundle.js'
 
 /* global describe, it */
 
 describe('Setup.test.js - Setup, Instantiation, & Invokation', function () {
-  it('should not throw when required', function () {
-    assert.ok(require('../dist/bundle.js'))
+  it('should be a class instantiation', function () {
+    assert.ok(new Module())
   })
 
   // it('should return an Error if invoked without wrong args', function () {
