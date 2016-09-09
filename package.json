@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "template-npm-module": "bin/cli.js"
+  },
   "keywords": [
     "NPM",
     "module",
@@ -15,5 +18,8 @@
     "generator"
   ],
   "author": "coryrobinson42@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mv": "^2.1.1"
+  }
 }
