@@ -1,10 +1,10 @@
 {
   "name": "template-npm-module",
-  "version": "1.0.2",
   "description": "A NPM module directory/files template generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard bin/cli.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "bin": {
     "template-npm-module": "bin/cli.js"
@@ -21,5 +21,13 @@
   "license": "MIT",
   "dependencies": {
     "node-cp": "^0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crobinson42/template-npm-module.git"
+  },
+  "devDependencies": {
+    "semantic-release": "^4.3.5",
+    "standard": "^8.0.0"
   }
 }

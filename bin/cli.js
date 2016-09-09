@@ -4,9 +4,9 @@
 var path = require('path')
 var cp = require('node-cp')
 
-var template_dir = path.resolve(path.join(__dirname,'../template_dir/'))
+var templateDir = path.resolve(path.join(__dirname, '../template_dir/'))
 
-cp(template_dir, process.cwd(), function(err, files) {
+cp(templateDir, process.cwd(), function (err, files) {
   if (err) {
     console.log('\n')
     console.log('\n')
